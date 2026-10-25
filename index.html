@@ -1196,6 +1196,12 @@
       line-height: 1.6;
     }
 
+    .cta-banner-btn {
+      padding: 18px 36px;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
     /* =========================================================
        CONTACTS & WORKSHOP LOCATION (EXACT ADDRESS: БАБОЧКИНА, 1Б)
        ========================================================= */
@@ -1378,11 +1384,23 @@
       }
       .contact-split-box {
         grid-template-columns: 1fr;
+        padding: 36px 28px;
+        gap: 32px;
       }
       .cta-banner-card {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         padding: 38px 28px;
+        gap: 24px;
+      }
+      .cta-banner-btn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        padding: 16px 24px;
+        font-size: 14.5px;
+        justify-content: center;
       }
     }
 
@@ -1403,6 +1421,19 @@
         flex-direction: column;
         align-items: stretch;
         text-align: center;
+        padding: 22px 18px;
+        gap: 16px;
+      }
+      #bookCtaBtn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        padding: 14px 16px;
+        font-size: 13.5px;
+        line-height: 1.25;
+        justify-content: center;
+        box-sizing: border-box;
       }
     }
 
@@ -1417,13 +1448,27 @@
         display: none;
       }
       .phone-number-bold {
-        font-size: 14px;
+        font-size: 13.5px;
+        white-space: nowrap;
       }
       .header-contact-cluster .btn {
         display: none;
       }
       .hero-split-section {
-        padding: 44px 0 60px;
+        padding: 40px 0 54px;
+      }
+      .hero-title-giant {
+        font-size: 26px;
+        line-height: 1.15;
+      }
+      .hero-action-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .hero-action-buttons .btn {
+        width: 100%;
+        justify-content: center;
       }
       .floating-trust-badge {
         position: static;
@@ -1443,7 +1488,65 @@
         gap: 8px;
       }
       .calc-master-card {
-        padding: 24px 16px;
+        padding: 20px 14px;
+      }
+      .calc-summary-dock {
+        padding: 18px 14px;
+      }
+      #bookCtaBtn {
+        font-size: 13px;
+        padding: 13px 12px;
+      }
+      .cta-banner-card {
+        padding: 26px 16px;
+      }
+      .cta-banner-title {
+        font-size: 22px;
+      }
+      .cta-banner-btn {
+        padding: 14px 16px;
+        font-size: 13px;
+        line-height: 1.25;
+      }
+      .contact-split-box {
+        padding: 22px 14px;
+        gap: 24px;
+      }
+      .contact-actions-wrap {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+      }
+      .contact-actions-wrap .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 14px !important;
+        font-size: 13px !important;
+        white-space: normal !important;
+      }
+      .contact-direction-box {
+        padding: 18px 12px !important;
+      }
+      .direction-map-btn {
+        width: 100% !important;
+        white-space: normal !important;
+        padding: 12px 12px !important;
+        font-size: 12.5px !important;
+        line-height: 1.25 !important;
+        justify-content: center !important;
+      }
+      .floating-whatsapp-btn {
+        bottom: 18px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+      }
+      .floating-whatsapp-btn svg {
+        width: 26px;
+        height: 26px;
+      }
+      .site-footer {
+        padding-bottom: 76px;
       }
       .top-ribbon {
         font-size: 11px;
@@ -2105,7 +2208,7 @@
           </p>
         </div>
 
-        <button class="btn btn-cyan" onclick="openBookingModal()" style="padding:18px 36px; font-size:15px;">
+        <button class="btn btn-cyan cta-banner-btn" onclick="openBookingModal()">
           Зафиксировать скидку 10%
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px; height:18px;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </button>
@@ -2153,7 +2256,7 @@
             </div>
           </div>
 
-          <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
+          <div class="contact-actions-wrap" style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
             <a href="https://wa.me/79271411411" target="_blank" class="btn btn-cyan" style="padding:12px 20px;">
               Написать в WhatsApp
             </a>
@@ -2168,7 +2271,7 @@
         </div>
 
         <!-- Direction Box -->
-        <div style="background:var(--bg-dark); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:28px; text-align:center;">
+        <div class="contact-direction-box" style="background:var(--bg-dark); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:28px; text-align:center;">
           <div style="width:54px; height:54px; border-radius:50%; background:var(--cyan-dim); border:1px solid var(--cyan); color:var(--cyan); display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:26px; height:26px;"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
           </div>
@@ -2176,7 +2279,7 @@
           <p style="font-size:13px; color:var(--text-secondary); margin-bottom:20px; line-height:1.5;">
             Постройте прямой маршрут на Яндекс.Картах до ворот автостудии Odds Detailing.
           </p>
-          <a href="https://yandex.ru/maps/org/odds/11772334140/" target="_blank" class="btn btn-ghost" style="width:100%;">
+          <a href="https://yandex.ru/maps/org/odds/11772334140/" target="_blank" class="btn btn-ghost direction-map-btn" style="width:100%;">
             Открыть в Яндекс.Картах
           </a>
         </div>
@@ -2355,7 +2458,7 @@
         discountBadge.style.display = 'none';
         finalPriceText.textContent = '0 ₽';
         summaryStatusLabel.textContent = 'Выберите услуги в списке выше:';
-        bookCtaBtn.innerHTML = `Выберите услуги в списке`;
+        bookCtaBtn.innerHTML = `<span>Выберите услуги в списке</span>`;
         bookCtaBtn.style.opacity = '0.5';
         bookCtaBtn.style.pointerEvents = 'none';
 
@@ -2373,7 +2476,7 @@
         finalPriceText.textContent = formatNumber(discountedTotal) + ' ₽';
         saveAmountText.textContent = formatNumber(saved);
 
-        bookCtaBtn.innerHTML = `Зафиксировать расчет и скидку`;
+        bookCtaBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px; height:18px; flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> <span>Зафиксировать расчет и скидку</span>`;
         bookCtaBtn.style.opacity = '1';
         bookCtaBtn.style.pointerEvents = 'auto';
 
